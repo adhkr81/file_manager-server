@@ -1,0 +1,28 @@
+-------------------------------------BUGS TO FIX--------------------
+
+1. (LINE #255 sADD GET ROUTE & LINE #121 FRONTEND) EMPTY FOLDERS ARE NOT BEING SAVED AS KEYS IS REDIS (missing some variables)
+
+2. HARDCODED THINGS TO CHANGE
+    - owner line 512
+    - project line 283
+    - project line 341
+    - addproject route OWNER line 512
+    - project line 396
+    - project line 399
+
+3. LINE 376 - responses are being sent in socket from DB now, not from REDIS + socket    
+
+-------------------------------------disk Storage for multer--------------------
+
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//         cb(null, "uploads") 
+//     },
+//     filename: (req, file, cb) => {
+//         cb(null, Date.now() + '-' + file.originalname)
+//     }
+// })
+
+// const upload = multer({storage: storage})
+
+----------------------------------------------------------------------------------

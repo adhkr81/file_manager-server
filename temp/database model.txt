@@ -1,0 +1,64 @@
+COMPANIES
+- id :nanoid
+- title : string
+- language: string
+- settings : string { }
+- storagePath: string //path to companies static assests
+- created : date
+- updated: date
+
+BRANCHES
+- id :nanoid
+- title : string
+- company: company id
+- subBranches: [branch ids]
+- language: string
+- settings : string { }
+- created : date
+- updated: date
+
+ROLES
+- id :nanoid
+- created : date
+- updated: date
+
+USERS
+- id :nanoid
+- email : string
+- firstName: string
+- lastName: string
+- hash: encrypted string
+- company: company id
+- branch: branch id
+- role: role id
+- settings : string {}
+- created : date
+- updated: date
+
+PROJECTS
+- id :nanoid
+- title : string
+- branch: branch id
+- owner :  user id
+- editors: [user ids]
+- backups: [project snapshot id]
+- currentVersion: project snapshot id
+- published: boolean
+- publishedURL: string  | null
+- analyticsId: string | null
+- created : date
+- updated: date
+
+PROJECTSNAPSHOTS
+- id: nanoid
+- filename: string
+- created: date
+
+IMAGES
+- id :nanoid
+- filename : string
+- uploadedTo: project id
+- belongsTo: company id
+- path: string
+- created : date
+- updated: date
